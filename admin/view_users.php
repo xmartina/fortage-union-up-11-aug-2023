@@ -76,6 +76,7 @@ if(isset($_POST['profile_save'])){
      $acct_cot = $_POST['acct_cot'];
       $acct_imf = $_POST['acct_imf'];
        $acct_tax = $_POST['acct_tax'];
+       $acct_transfer_limit = $_POST['acct_transfer_limit'];
 
 
 //    if($acct_limit === '5000'){
@@ -115,7 +116,8 @@ if(isset($_POST['profile_save'])){
         'marital_status'=>$marital_status,
         'acct_limit'=>$acct_limit,
         'acct_balance'=>$acct_balance,
-        'limit_remain'=>$limiBalance,
+        'limit_remain'=>$acct_transfer_limit,
+//        'limit_remain'=>$limiBalance,
         'id'=>$id
     ]);
 
@@ -408,6 +410,12 @@ die;
                                                                 <div class="form-group">
                                                                     <label for="profession">IMF code</label>
                                                                     <input type="text" class="form-control mb-4" placeholder="Date Of Birth" value="<?= $row['acct_imf'] ?>" name="acct_imf">
+                                                                </div>
+                                                            </div>
+                                                             <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label for="profession">Transfer Limit</label>
+                                                                    <input type="text" class="form-control mb-4" placeholder="Date Of Birth" value="<?= $row['limit_remain'] ?>" name="acct_transfer_limit">
                                                                 </div>
                                                             </div>
                                                         </div>
