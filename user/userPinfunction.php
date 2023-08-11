@@ -156,7 +156,7 @@ if(isset($_POST['wire_transfer'])){
                         $_SESSION['wire-transfer']=$user_id;
                         header("Location:./pin.php");
                     }
-                }
+            }    }
         }
     }
 
